@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 010e0af2e6ec3d645a739ba2211b6d7d, type: 2}
 --- !u!1 &18781974
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +281,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &720769835
 BoxCollider:
@@ -620,7 +620,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1461194874
 BoxCollider:
@@ -709,7 +709,6 @@ GameObject:
   - component: {fileID: 1605914496}
   - component: {fileID: 1605914495}
   - component: {fileID: 1605914494}
-  - component: {fileID: 1605914499}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -808,31 +807,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1605914499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605914493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c73776a8af10854f9ea6dcea626b7b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {fileID: 865039181}
-  - {fileID: 986808997}
-  - {fileID: 559879252}
-  - {fileID: 18781975}
-  agent: {fileID: 0}
-  target: {fileID: 0}
-  chaspeed: 0.05
-  origColor: {r: 0, g: 0, b: 0, a: 0}
-  muzzlePoint: {fileID: 0}
-  ball: {fileID: 0}
-  speed: 30
-  intvalTime: 30
 --- !u!1 &1888063087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1102,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &2073245734
 BoxCollider:
