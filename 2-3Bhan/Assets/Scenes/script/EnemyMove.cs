@@ -1,99 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿// Patrol.cs
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 
 public class EnemyMove : MonoBehaviour
 {
+
     public Transform[] points;
     private int destPoint = 0;
-    public NavMeshAgent agent;
-    public GameObject target;
-    private bool inArea = false;
-    public float chaspeed = 0.05f;
-    public Color origColor;
+    private NavMeshAgent agent;
 
-    public GameObject muzzlePoint;
-    public GameObject ball;
-    public float speed = 30f;
-    private int attackTime = 0;
-    public int intvalTime = 30;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        // autoBraking を無効にすると、目標地点の間を継続的に移動します
+        //(つまり、エージェントは目標地点に近づいても
+        // 速度をおとしません)
         agent.autoBraking = false;
+
         GotoNextPoint();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (agent.remainingDistance < 0.5f)
-        {
-            GotoNextPoint();
-        }
 
-        if (target.activeInHierarchy == false)
-        {
-            GetComponent<Renderer>().material.color = origColor;
-        }
-
-        if (inArea == true)
-        {
-            attackTime += 1;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.transform.position - transform.position), Time.deltaTime * 30.0f);
-            if (attackTime % intvalTime == 0)
-            {
-                EneCannonShot();
-            }
-        }
-    }
     void GotoNextPoint()
     {
+        // 地点がなにも設定されていないときに返します
         if (points.Length == 0)
-        {
             return;
-        }
+
+        // エージェントが現在設定された目標地点に行くように設定します
         agent.destination = points[destPoint].position;
+
+        // 配列内の次の位置を目標地点に設定し、
+        // 必要ならば出発地点にもどります
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    public void EneCannonShot()
+
+    void Update()
     {
-        if (target.activeInHierarchy == false)
-        {
-            GetComponent<Renderer>().material.color = origColor;
-            inArea = false;
-        }
-
-        Vector3 mballPos = muzzlePoint.transform.position;
-        GameObject newBall = Instantiate(ball, mballPos, transform.rotation);
-        Vector3 dir = muzzlePoint.transform.forward;
-
-        newBall.GetComponent<Rigidbody>().AddForce(dir * speed, ForceMode.Impulse);
-        newBall.name = ball.name;
-        Destroy(newBall, 0.8f);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            inArea = true;
-            GetComponent<Renderer>().material.color = new Color(255f / 255f, 65f / 255f, 26f / 255f, 255f / 255f);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            inArea = false;
-            GetComponent<Renderer>().material.color = origColor;
+        // エージェントが現目標地点に近づいてきたら、
+        // 次の目標地点を選択します
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GotoNextPoint();
-        }
     }
 }
