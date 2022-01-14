@@ -279,7 +279,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: R_Horizontal
-    descriptiveName: 
+    descriptiveName: Stick R left/right
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
