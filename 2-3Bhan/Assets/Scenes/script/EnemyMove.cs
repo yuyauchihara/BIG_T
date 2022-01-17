@@ -34,6 +34,21 @@ public class EnemyMove : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inArea = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inArea = false;
+        }
+    }
 
     void Update()
     {
