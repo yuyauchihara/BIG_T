@@ -5,13 +5,10 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour
 {
-    public bool inArea = false;
+    private RaycastHit[] _raycastHits = new RaycastHit[10];
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-    [SerializeField]
-    [Tooltip("Player")]
-    private GameObject player;
 
 
     void Start()
@@ -34,39 +31,30 @@ public class EnemyMove : MonoBehaviour
         destPoint = (destPoint + 1) % points.Length;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            inArea = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            inArea = false;
-        }
-    }
 
     void Update()
     {
-        if (inArea == false)
-        {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-                GotoNextPoint();
-        }
-        if(inArea == true)
-        {
-            agent.destination = player.transform.position;
-        }
+        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            GotoNextPoint();
+
     }
-    public void OnDetectObject(Collider Collider)
+    public void OnDetectObject(Collider collider)
     {
-        if (Collider.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
-            agent.destination = Collider.transform.position;
+            var positionDiff = collider.transform.position - transform.position;
+            var distance = positionDiff.magnitude;
+            var direction = positionDiff.normalized;
+            var hitCount = Physics.RaycastNonAlloc(transform.position, direction, _raycastHits, distance);
+            Debug.Log("hitCount: " + hitCount);
+            if (hitCount <= 1)
+            {
+                agent.isStopped = false;
+                agent.destination = collider.transform.position;
+            }
+            else
+            { 
+            }
         }
     }
 }
