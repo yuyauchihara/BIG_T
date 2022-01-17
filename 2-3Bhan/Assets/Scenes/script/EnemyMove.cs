@@ -5,10 +5,13 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour
 {
-
+    public bool inArea = false;
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    [SerializeField]
+    [Tooltip("Player")]
+    private GameObject player;
 
 
     void Start()
@@ -34,7 +37,21 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            GotoNextPoint();
+        if (inArea == false)
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+                GotoNextPoint();
+        }
+        if(inArea == true)
+        {
+            agent.destination = player.transform.position;
+        }
+    }
+    public void OnDetectObject(Collider Collider)
+    {
+        if (Collider.CompareTag("Player"))
+        {
+            agent.destination = Collider.transform.position;
+        }
     }
 }
