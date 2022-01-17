@@ -1,0 +1,12 @@
+diff a/2-3Bhan/Assets/Scenes/yuya_scene.unity b/2-3Bhan/Assets/Scenes/yuya_scene.unity	(rejected hunks)
+@@ -1023,5 +1023,10 @@
+       propertyPath: m_Name
+       value: FPSController
+       objectReference: {fileID: 0}
++    - target: {fileID: 1339320484848277665, guid: 46c5539a92e45824c9a330538edf1c9d,
++        type: 3}
++      propertyPath: DopplerLevel
++      value: 1
++      objectReference: {fileID: 0}
+     m_RemovedComponents: []
+   m_SourcePrefab: {fileID: 100100000, guid: 46c5539a92e45824c9a330538edf1c9d, type: 3}
