@@ -53,7 +53,9 @@ public class EnemyMove : MonoBehaviour
                 agent.destination = collider.transform.position;
             }
             else
-            { 
+            {
+                agent.isStopped = true;
+                agent.isStopped = false;
             }
         }
     }
