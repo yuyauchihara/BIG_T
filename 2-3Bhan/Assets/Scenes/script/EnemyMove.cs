@@ -7,6 +7,7 @@ public class EnemyMove : MonoBehaviour
 {
     private RaycastHit[] _raycastHits = new RaycastHit[10];
     public Transform[] points;
+    public float speed = 2f;
     private int destPoint = 0;
     private NavMeshAgent agent;
 
