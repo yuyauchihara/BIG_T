@@ -23,5 +23,10 @@ public class area : MonoBehaviour
             i = true;
 		}
 	}
+
+    private void OnTriggerExit(Collider other)
+    {
+        i = false;
+    }
 }
 
