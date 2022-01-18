@@ -1,32 +1,19 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
-using System.Collections;
+﻿using System;
+using UnityEngine;
+using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider))]
 public class CollisionDetector : MonoBehaviour
 {
-    EnemyMove enemy;
-    private NavMeshAgent agent;
-    [SerializeField]
-    [Tooltip("Player")]
-    private GameObject player;
-
-    private void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
+    [SerializeField] private TriggerEvent onTriggerStay = new TriggerEvent();
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            enemy.inArea = true;
-        }
+        onTriggerStay.Invoke(other);
     }
 
-    private void OnTriggerExit(Collider other)
+    [Serializable]
+    public class TriggerEvent : UnityEvent<Collider>
     {
-        if (other.gameObject.tag == "Player")
-        {
-            enemy.inArea = false;
-        }
+
     }
 }
