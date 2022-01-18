@@ -257,13 +257,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705792752}
-  m_LocalRotation: {x: 0.36462387, y: 0.60584605, z: -0.36462393, w: 0.60584605}
-  m_LocalPosition: {x: -34.16, y: 67.22, z: 0.6}
+  m_LocalRotation: {x: 0.37601137, y: 0.58420813, z: -0.38406545, w: 0.6081202}
+  m_LocalPosition: {x: -23.3, y: 72.9, z: -4.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 62.083004, y: 90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 64.968, y: 85.305, z: -3.7640002}
 --- !u!1 &720769834
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755428002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1605914498}
@@ -401,7 +401,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ceadebc3c07faa46ad6e32046adfdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1650920900}
+  onTriggerStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1605914500}
+        m_MethodName: OnDetectObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &755428005
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -413,7 +426,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &865039180
 GameObject:
@@ -439,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865039180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 3, z: -19}
+  m_LocalPosition: {x: 18.5, y: 3, z: -17.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -748,7 +761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461194873}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.26000023, y: 5.5, z: 0.70000076}
+  m_LocalPosition: {x: 0.1, y: 5.5, z: 0.7}
   m_LocalScale: {x: 25, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -860,14 +873,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605914493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.7, y: 2.79, z: -16.5}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 19.962912, y: 2.79, z: -3.7}
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children:
   - {fileID: 755428003}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!195 &1605914499
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -902,13 +915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c73776a8af10854f9ea6dcea626b7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inArea: 0
   points:
   - {fileID: 865039181}
   - {fileID: 986808997}
   - {fileID: 559879252}
   - {fileID: 18781975}
-  player: {fileID: 1650920900}
 --- !u!1 &1650920900
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +987,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: eabd102362ffd7746a76fe2ab505e1c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1013,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650920900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.27, y: 3.56, z: -5.06}
+  m_LocalPosition: {x: -3.27, y: 3.56, z: -8}
   m_LocalScale: {x: 2, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
