@@ -56,7 +56,7 @@ public class EnemyMove : MonoBehaviour
             else
             {
                 agent.isStopped = true;
-                agent.isStopped = false;
+                //agent.isStopped = false;
             }
         }
     }
