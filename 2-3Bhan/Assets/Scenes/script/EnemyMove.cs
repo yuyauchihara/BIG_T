@@ -30,6 +30,8 @@ public class EnemyMove : MonoBehaviour
         agent.destination = points[destPoint].position;
 
         destPoint = (destPoint + 1) % points.Length;
+
+        agent.speed = 3;
     }
 
 
@@ -48,9 +50,10 @@ public class EnemyMove : MonoBehaviour
             var direction = positionDiff.normalized;
             var hitCount = Physics.RaycastNonAlloc(transform.position, direction, _raycastHits, distance);
             Debug.Log("hitCount: " + hitCount);
-            if (hitCount <= 1)
+            if (hitCount <= 2)
             {
                 agent.isStopped = false;
+                agent.speed = 6;
                 agent.destination = collider.transform.position;
             }
             else
