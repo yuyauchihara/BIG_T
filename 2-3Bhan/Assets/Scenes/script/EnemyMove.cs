@@ -5,7 +5,7 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour
 {
-    private RaycastHit[] _raycastHits = new RaycastHit[10];
+    private RaycastHit[] _raycastHits = new RaycastHit[50];
     public Transform[] points;
     public float speed = 2f;
     private int destPoint = 0;
