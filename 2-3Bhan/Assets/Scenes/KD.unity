@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 167791775}
   - component: {fileID: 167791774}
   - component: {fileID: 167791773}
+  - component: {fileID: 167791777}
   m_Layer: 0
   m_Name: kyusoku3
   m_TagString: Untagged
@@ -217,7 +218,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167791772}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -283,6 +284,18 @@ Transform:
   m_Father: {fileID: 1968676120}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167791777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167791772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3d5c3c19745c47bdff8d1ceb05f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &239896619
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +661,7 @@ GameObject:
   - component: {fileID: 349991733}
   - component: {fileID: 349991732}
   - component: {fileID: 349991731}
+  - component: {fileID: 349991734}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Player
@@ -663,7 +677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349991729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.43, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 580213020}
@@ -730,6 +744,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349991729}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &349991734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349991729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28afad28b2f72f45947eda1624175de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &355016787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1225,6 +1251,7 @@ GameObject:
   - component: {fileID: 853954230}
   - component: {fileID: 853954229}
   - component: {fileID: 853954228}
+  - component: {fileID: 853954232}
   m_Layer: 0
   m_Name: kyusoku2
   m_TagString: Untagged
@@ -1240,7 +1267,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853954227}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1306,6 +1333,18 @@ Transform:
   m_Father: {fileID: 1968676120}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &853954232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853954227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3d5c3c19745c47bdff8d1ceb05f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &894548743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1565,6 +1604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49523f7360c391e4b91c1e2afc0d9396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beat: 50
+  currentHp: 0
+  cTime: 0
   slider: {fileID: 966072972}
 --- !u!114 &966072972 stripped
 MonoBehaviour:
@@ -2866,6 +2908,7 @@ GameObject:
   - component: {fileID: 1679260871}
   - component: {fileID: 1679260870}
   - component: {fileID: 1679260869}
+  - component: {fileID: 1679260873}
   m_Layer: 0
   m_Name: kyusoku1
   m_TagString: Untagged
@@ -2881,7 +2924,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679260868}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2947,6 +2990,18 @@ Transform:
   m_Father: {fileID: 1968676120}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1679260873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679260868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3d5c3c19745c47bdff8d1ceb05f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782056207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,6 +3556,7 @@ GameObject:
   - component: {fileID: 2058324815}
   - component: {fileID: 2058324814}
   - component: {fileID: 2058324813}
+  - component: {fileID: 2058324817}
   m_Layer: 0
   m_Name: kyusoku4
   m_TagString: Untagged
@@ -3516,7 +3572,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058324812}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3582,6 +3638,18 @@ Transform:
   m_Father: {fileID: 1968676120}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058324817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058324812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3d5c3c19745c47bdff8d1ceb05f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4542806005088951730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3598,6 +3666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542806004693436217, guid: 0fa08c4abf8839445b0b428612435efc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.900024
       objectReference: {fileID: 0}
     - target: {fileID: 4542806006472396145, guid: 0fa08c4abf8839445b0b428612435efc,
         type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class area : MonoBehaviour
 {
-    public static int cnt=0;
+   
     public static bool i = false;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,10 @@ public class area : MonoBehaviour
         { 
 			Debug.Log("内");
             i = true;
+            if (i == true)
+            {
+                Debug.Log("ok");
+            }
 		}
 	}
 
