@@ -8,7 +8,7 @@ public class RecoverAudio : MonoBehaviour
     AudioSource audioSource;
     int SEflag = 1;
     float SEtime = 0;
-    float SEspan = 300;
+    float SEspan = 400;
 
     void Start()
     {
