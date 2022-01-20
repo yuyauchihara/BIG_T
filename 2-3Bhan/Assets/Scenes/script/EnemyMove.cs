@@ -7,6 +7,7 @@ public class EnemyMove : MonoBehaviour
 {
     private RaycastHit[] _raycastHits = new RaycastHit[10];
     public Transform[] points;
+    public float speed = 2f;
     private int destPoint = 0;
     private NavMeshAgent agent;
 
@@ -47,13 +48,15 @@ public class EnemyMove : MonoBehaviour
             var direction = positionDiff.normalized;
             var hitCount = Physics.RaycastNonAlloc(transform.position, direction, _raycastHits, distance);
             Debug.Log("hitCount: " + hitCount);
-            if (hitCount <= 1)
+            if (hitCount <= 2)
             {
                 agent.isStopped = false;
                 agent.destination = collider.transform.position;
             }
             else
-            { 
+            {
+                agent.isStopped = true;
+                agent.isStopped = false;
             }
         }
     }

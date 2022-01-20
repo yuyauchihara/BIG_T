@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+<<<<<<< HEAD
   - yasu
+=======
+  - Point
+>>>>>>> 7029c82ba936e2ebc98f89c2a4ca2824ac56f7c0
   layers:
   - Default
   - TransparentFX
