@@ -20,6 +20,7 @@ public class PlayerHPBar : MonoBehaviour
 
     void Start()
     {
+        cTime = 0f;
         //Sliderを満タンにする。
         slider.value = 1;
         //現在のHPを最大HPと同じに。
@@ -63,7 +64,7 @@ public class PlayerHPBar : MonoBehaviour
 
                 slider.value = (float)currentHp / (float)maxHp;
 
-                Debug.Log(currentHp);
+                //Debug.Log(currentHp);
 
             }
         }
