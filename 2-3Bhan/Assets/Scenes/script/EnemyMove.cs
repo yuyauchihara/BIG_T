@@ -49,8 +49,6 @@ public class EnemyMove : MonoBehaviour
         // 配列内の次の位置を目標地点に設定し、
         // 必要ならば出発地点にもどります
         destPoint = (destPoint + 1) % points.Length;
-
-        agent.speed = 3;
     }
 
 
