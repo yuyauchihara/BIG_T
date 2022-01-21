@@ -8,7 +8,7 @@ public class RecoverAudio : MonoBehaviour
     AudioSource audioSource;
     int SEflag = 1;
     float SEtime = 0;
-    float SEspan = 400;
+    float SEspan = 395;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class RecoverAudio : MonoBehaviour
     void Update()
     {
         SEtime++;
-        Debug.Log(SEtime);
+        //Debug.Log(SEtime);
     }
     private void OnTriggerStay(Collider other)
     {
