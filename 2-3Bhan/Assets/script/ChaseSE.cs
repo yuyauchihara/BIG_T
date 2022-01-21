@@ -49,9 +49,9 @@ public class ChaseSE : MonoBehaviour
 
     IEnumerator VolumeDown()
     {
-        while (audioSource.volume > 0.001)
+        while (audioSource.volume > 0)
         {
-            audioSource.volume -= 0.01f;
+            audioSource.volume -= 0.001f;
             yield return new WaitForSeconds(0.1f);
             if(audioSource.volume == 0)
             {

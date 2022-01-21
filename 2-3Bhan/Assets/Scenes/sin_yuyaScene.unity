@@ -5856,7 +5856,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.008
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6176,7 +6176,7 @@ GameObject:
   - component: {fileID: 1860250850}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
