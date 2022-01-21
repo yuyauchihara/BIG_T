@@ -72,24 +72,6 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
-<<<<<<< HEAD
-            var positionDiff = collider.transform.position - transform.position;
-            var distance = positionDiff.magnitude;
-            var direction = positionDiff.normalized;
-            var hitCount = Physics.RaycastNonAlloc(transform.position, direction, _raycastHits, distance);
-            Debug.Log("hitCount: " + hitCount);
-            if (hitCount <= 2)
-            {
-                agent.isStopped = false;
-                agent.speed = 6;
-                agent.destination = collider.transform.position;
-            }
-            else
-            {
-                agent.isStopped = true;
-                agent.isStopped = false;
-            }
-=======
             //PlayerがtrackingRangeより近づいたら追跡開始
             if (distance < trackingRange)
                 tracking = true;
@@ -99,7 +81,6 @@ public class EnemyMove : MonoBehaviour
             // 次の目標地点を選択します
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 GotoNextPoint();
->>>>>>> c8c129916c87a452ad2685e8f5672f835fdaf6c3
         }
     }
 
