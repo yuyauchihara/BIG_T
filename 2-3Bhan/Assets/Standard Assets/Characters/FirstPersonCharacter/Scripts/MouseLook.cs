@@ -19,7 +19,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
-        //private bool m_cursorIsLocked = true;
 
         public void Init(Transform character, Transform camera)
         {
@@ -31,10 +30,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void LookRotation(Transform character, Transform camera)
         {
             float yRot = CrossPlatformInputManager.GetAxis("R_Horizontal") * XSensitivity;
-            //float xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
 
             m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
-            //m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);
 
             if(clampVerticalRotation)
                 m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
@@ -64,36 +61,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Cursor.visible = true;
             }
         }
-
-        //public void UpdateCursorLock()
-        //{
-        //    //if the user set "lockCursor" we check & properly lock the cursos
-        //    if (lockCursor)
-        //        InternalLockUpdate();
-        //}
-
-        //private void InternalLockUpdate()
-        //{
-        //    if(Input.GetKeyUp(KeyCode.Escape))
-        //    {
-        //        m_cursorIsLocked = false;
-        //    }
-        //    else if(Input.GetMouseButtonUp(0))
-        //    {
-        //        m_cursorIsLocked = true;
-        //    }
-
-        //    if (m_cursorIsLocked)
-        //    {
-        //        Cursor.lockState = CursorLockMode.Locked;
-        //        Cursor.visible = false;
-        //    }
-        //    else if (!m_cursorIsLocked)
-        //    {
-        //        Cursor.lockState = CursorLockMode.None;
-        //        Cursor.visible = true;
-        //    }
-        //}
 
         Quaternion ClampRotationAroundXAxis(Quaternion q)
         {
