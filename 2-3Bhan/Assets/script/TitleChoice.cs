@@ -12,7 +12,7 @@ public class TitleChoice : MonoBehaviour
 
     void OnEnable()
     {
-        button3.GetComponent<Button>().Select();
+        //button3.GetComponent<Button>().Select();
         button2.GetComponent<Button>().Select();
         //button = GameObject.Find("menu/Panel/re").GetComponent<Button>();
         //ボタンが選択された状態になる

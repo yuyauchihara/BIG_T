@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Title Scene.unity
     guid: 0caa064abe2c9834eb5e4023f2a46328
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Taichi.unity
     guid: ec343958697693a489437456036e8d57
   m_configObjects: {}
