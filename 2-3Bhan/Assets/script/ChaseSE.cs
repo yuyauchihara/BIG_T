@@ -51,7 +51,7 @@ public class ChaseSE : MonoBehaviour
     {
         while (audioSource.volume > 0)
         {
-            audioSource.volume -= 0.001f;
+            audioSource.volume -= 0.01f;
             yield return new WaitForSeconds(0.1f);
             if(audioSource.volume == 0)
             {
