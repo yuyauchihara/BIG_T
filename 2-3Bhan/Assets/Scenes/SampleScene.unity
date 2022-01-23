@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 318469462}
   - component: {fileID: 318469464}
   - component: {fileID: 318469463}
+  - component: {fileID: 318469465}
   m_Layer: 0
   m_Name: kyusoku4
   m_TagString: Untagged
@@ -733,6 +734,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: 69b53678a8cc12f478821564b8766943, type: 3}
+--- !u!114 &318469465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318469457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa4250c97b253141b648b256d56f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &334087072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1641,7 @@ GameObject:
   - component: {fileID: 815790579}
   - component: {fileID: 815790581}
   - component: {fileID: 815790580}
+  - component: {fileID: 815790582}
   m_Layer: 0
   m_Name: kyusoku1
   m_TagString: Untagged
@@ -1830,6 +1844,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: 69b53678a8cc12f478821564b8766943, type: 3}
+--- !u!114 &815790582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815790574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa4250c97b253141b648b256d56f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &842797597 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7300786459035464369, guid: b37ebd7bb5786d84a98bed8d9dc43039,
@@ -1950,6 +1976,7 @@ GameObject:
   - component: {fileID: 1067809952}
   - component: {fileID: 1067809954}
   - component: {fileID: 1067809953}
+  - component: {fileID: 1067809955}
   m_Layer: 0
   m_Name: kyusoku3
   m_TagString: Untagged
@@ -2152,6 +2179,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: 69b53678a8cc12f478821564b8766943, type: 3}
+--- !u!114 &1067809955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067809947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa4250c97b253141b648b256d56f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1068555931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3795,6 +3834,7 @@ GameObject:
   - component: {fileID: 1538483085}
   - component: {fileID: 1538483087}
   - component: {fileID: 1538483086}
+  - component: {fileID: 1538483088}
   m_Layer: 0
   m_Name: kyusoku2
   m_TagString: Untagged
@@ -3997,6 +4037,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: 69b53678a8cc12f478821564b8766943, type: 3}
+--- !u!114 &1538483088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538483080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa4250c97b253141b648b256d56f00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1555007578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6293610565986751565, guid: c762464456ce1044fa2f6fd4837b4f27,
