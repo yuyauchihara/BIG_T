@@ -75,7 +75,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (Pause == 0)
             {
-                Debug.Log("haitteiiru");
+                //Debug.Log("haitteiiru");
                 RotateView();
             }
             // the jump state needs to read here to make sure it is not missed

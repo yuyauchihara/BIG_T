@@ -8,7 +8,7 @@ public class RecoverAudio : MonoBehaviour
     AudioSource audioSource;
     int SEflag = 1;
     float SEtime = 0;
-    float SEspan = 400;
+    float SEspan = 395;
 
     void Start()
     {
@@ -17,6 +17,7 @@ public class RecoverAudio : MonoBehaviour
     void Update()
     {
         SEtime++;
+        //Debug.Log(SEtime);
     }
     private void OnTriggerStay(Collider other)
     {
@@ -26,6 +27,7 @@ public class RecoverAudio : MonoBehaviour
             
             if (SEflag == 1)
             {
+                //Debug.Log("音が鳴った");
                 //音(sound1)を鳴らす
                 audioSource.PlayOneShot(sound1);
 
@@ -34,8 +36,10 @@ public class RecoverAudio : MonoBehaviour
 
             if (SEflag == 0)
             {
+                //Debug.Log("flagを変えようとしている");
                 if (SEtime > SEspan)
                 {
+                    //Debug.Log("flagを変えた");
                     SEflag = 1;
                     SEtime = 0;
                 }

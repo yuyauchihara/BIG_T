@@ -29,7 +29,7 @@ public class area : MonoBehaviour
         
 		if (other.gameObject.CompareTag("Player"))
         { 
-			Debug.Log("内");
+			//Debug.Log("内");
             i = true;
 
             if (this.gameObject.name == "kyusoku1")
@@ -68,7 +68,5 @@ public class area : MonoBehaviour
         kyusoku3 = false;
         kyusoku4 = false;
     }
-
-
 }
 
