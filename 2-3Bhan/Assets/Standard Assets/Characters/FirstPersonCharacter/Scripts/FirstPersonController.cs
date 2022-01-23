@@ -43,6 +43,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private int Pause = 0;  //メニューが押された判定をとる変数
+        private int backP = 0;  //今がメニューを開いているかの判定　0が開いていない
+
         // Use this for initialization
         private void Start()
         {
@@ -62,7 +65,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+            if(Input.GetKeyDown("joystick button 7") && backP == 0)
+            {
+                Pause = 1;
+                backP = 1;
+            }else if(Input.GetKeyDown("joystick button 7") && backP == 1){
+                Pause = 0;
+                backP = 0;
+            }
+            if (Pause == 0)
+            {
+                Debug.Log("haitteiiru");
+                RotateView();
+            }
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -214,7 +229,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
 
-            m_IsWalking = !Input.GetKeyDown("joystick button 0");
+            //m_IsWalking = !Input.GetKeyDown("joystick button 0");
 
             m_IsWalking = !Input.GetButton("Sprint");
 
