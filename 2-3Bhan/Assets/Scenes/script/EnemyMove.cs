@@ -21,6 +21,9 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] float quitRange = 5f;
     [SerializeField] bool tracking = false;
 
+    public AudioClip sound1;
+    AudioSource audioSource;
+    public bool volumeUp;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -34,6 +37,10 @@ public class EnemyMove : MonoBehaviour
 
         //追跡したいオブジェクトの名前を入れる
         player = GameObject.Find("Player");
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = 0.1f;
+        volumeUp = false;
     }
 
 
@@ -63,7 +70,11 @@ public class EnemyMove : MonoBehaviour
         {
             //追跡の時、quitRangeより距離が離れたら中止
             if (distance > quitRange)
+            {
                 tracking = false;
+
+                StartCoroutine("VolumeDown");
+            }
 
             //Playerを目標とする
             agent.destination = playerPos;
@@ -72,7 +83,13 @@ public class EnemyMove : MonoBehaviour
         {
             //PlayerがtrackingRangeより近づいたら追跡開始
             if (distance < trackingRange)
+            {
                 tracking = true;
+
+                //音(sound1)を鳴らす
+                audioSource.PlayOneShot(sound1);
+                StartCoroutine("VolumeUp");
+            }
 
 
             // エージェントが現目標地点に近づいてきたら、
@@ -91,5 +108,30 @@ public class EnemyMove : MonoBehaviour
         //quitRangeの範囲を青いワイヤーフレームで示す
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, quitRange);
+    }
+
+    IEnumerator VolumeUp()
+    {
+        if (!volumeUp)
+            while (audioSource.volume < 0.1)
+            {
+                audioSource.volume += 0.01f;
+                yield return new WaitForSeconds(0.1f);
+            }
+        volumeUp = true;
+    }
+
+    IEnumerator VolumeDown()
+    {
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= 0.01f;
+            yield return new WaitForSeconds(0.1f);
+            if (audioSource.volume == 0)
+            {
+                audioSource.Stop();
+            }
+        }
+        volumeUp = false;
     }
 }

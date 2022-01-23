@@ -881,8 +881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   It: 0
   i: 0
-  sound: {fileID: 8300000, guid: 39057a6c8da05dd4fb37fbd8548d74cf, type: 3}
-  sound2: {fileID: 8300000, guid: 46f6e7841350bab42826188d8c2c7be9, type: 3}
+  sound: {fileID: 8300000, guid: 176562ad742250e448a3e3f471ae0a4e, type: 3}
+  sound2: {fileID: 8300000, guid: d451f75c57c6ff04c84b1935e70bf5c3, type: 3}
 --- !u!1 &1604650878
 GameObject:
   m_ObjectHideFlags: 0
