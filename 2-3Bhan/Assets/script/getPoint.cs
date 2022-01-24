@@ -60,7 +60,7 @@ public class getPoint : MonoBehaviour
                     cTime = 0;
 
                 }
-                Debug.Log(cPoint+"/最大1000");
+                //Debug.Log(cPoint+"/最大1000");
             }  
         }
     }
