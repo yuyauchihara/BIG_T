@@ -12,7 +12,7 @@ public class PouseEnd : MonoBehaviour
 
     IEnumerator GameEndScene()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(0.8f);
         //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
 

@@ -13,7 +13,7 @@ public class BackScene : MonoBehaviour
 
     IEnumerator BackTitleScene()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.8f);
         SceneManager.LoadScene("Title");
     }
 }
