@@ -52,7 +52,7 @@ public class Menu: MonoBehaviour
     //メインシーンへ切り替え
     public void Scene()
     {
-        //SceneManager.LoadScene("シーン名");
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
