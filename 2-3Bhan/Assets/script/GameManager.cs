@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator RetryScene()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.8f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
