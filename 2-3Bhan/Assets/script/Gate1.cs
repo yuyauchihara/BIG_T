@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Gate : MonoBehaviour
+public class Gate1 : MonoBehaviour
 {
     int score = 0;
 
@@ -14,9 +14,9 @@ public class Gate : MonoBehaviour
         if (this.score >= 300)
         {
             Destroy(gameObject);
-            
+
         }
-       
+
 
     }
 }
