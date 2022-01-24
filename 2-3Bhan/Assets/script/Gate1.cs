@@ -8,10 +8,10 @@ public class Gate1 : MonoBehaviour
 {
     int score = 0;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
 
-        if (this.score >= 300)
+        if (getPoint.cPoint >= 1000)
         {
             Destroy(gameObject);
 
