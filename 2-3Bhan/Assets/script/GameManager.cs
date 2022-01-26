@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;//時間再稼働
         StartCoroutine(RetryScene());
     }
+    public void Retry2()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     IEnumerator RetryScene()
     {
