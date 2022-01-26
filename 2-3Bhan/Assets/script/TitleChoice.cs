@@ -8,7 +8,6 @@ public class TitleChoice : MonoBehaviour
     public Button button;
     public Button button2;
     public Button button3;
-    public RectTransform a;
 
     void OnEnable()
     {
