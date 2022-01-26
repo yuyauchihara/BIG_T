@@ -3255,8 +3255,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071319900}
-  - component: {fileID: 1071319902}
   - component: {fileID: 1071319901}
+  - component: {fileID: 1071319902}
   m_Layer: 0
   m_Name: CollisionDetector
   m_TagString: Untagged
@@ -3304,8 +3304,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!135 &1071319902
-SphereCollider:
+--- !u!136 &1071319902
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3314,9 +3314,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 50
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_Height: 2.56
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.06}
 --- !u!1001 &1151086273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4595,7 +4596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa4250c97b253141b648b256d56f00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 225530708}
+  scoreText: {fileID: 0}
 --- !u!114 &1420543043 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4542806004693436222, guid: 0fa08c4abf8839445b0b428612435efc,
@@ -5103,7 +5104,7 @@ PrefabInstance:
     - target: {fileID: 6911211866109018729, guid: 381f8a6c045854449a7894a0a811b0d2,
         type: 3}
       propertyPath: m_Radius
-      value: 5
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 6911211866109018729, guid: 381f8a6c045854449a7894a0a811b0d2,
         type: 3}
@@ -5280,7 +5281,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6911211866109018729, guid: 381f8a6c045854449a7894a0a811b0d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 381f8a6c045854449a7894a0a811b0d2, type: 3}
 --- !u!4 &1584258947 stripped
 Transform:
@@ -5400,6 +5402,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1574289999}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1621790035
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621790034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.01
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.09}
 --- !u!114 &1621790036
 MonoBehaviour:
   m_ObjectHideFlags: 0
