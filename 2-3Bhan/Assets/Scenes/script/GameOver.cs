@@ -4,32 +4,33 @@ using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.UI;
 
-
 public class GameOver : MonoBehaviour
 {
+    public GameObject FPSController;
     public Canvas GameOverText;
-    GameManager gameManager;
     FirstPersonController controller;
-    // Use this for initialization
+
     void Start()
     {
+        controller = FPSController.GetComponent<FirstPersonController>();
         GameOverText.enabled = false;
-        controller.enabled = true;
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+     
     }
 
-    void OnTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("触れた");
             GameOverText.enabled = true;
             controller.enabled = false;
+            Time.timeScale = 0f;
         }
     }
 }
