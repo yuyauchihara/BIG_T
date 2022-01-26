@@ -7,15 +7,14 @@ public class PouseEnd : MonoBehaviour
 {
     public void GameEnd()
     {
+        Time.timeScale = 1f;
         StartCoroutine(GameEndScene());
     }
 
     IEnumerator GameEndScene()
     {
         yield return new WaitForSeconds(0.8f);
-        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
-
     }
 }
 //#endif
