@@ -8,6 +8,11 @@ public class TitleChoice : MonoBehaviour
     public Button button;
     public Button button2;
     public Button button3;
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     void OnEnable()
     {

@@ -61,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
             Application.targetFrameRate = 60;
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
 
