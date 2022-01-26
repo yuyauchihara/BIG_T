@@ -11,8 +11,8 @@ public class PlayerHPBar : MonoBehaviour
     [SerializeField] public static int maxHp = 3000;
     [SerializeField] public int beat = 50;//回復量
 
-    public  int currentHp;//現在のHP
-   public  float cTime = 0f;//時間
+    public static int currentHp;//現在のHP
+    public  float cTime = 0f;//時間
    
 
     //Sliderを入れる
@@ -37,11 +37,19 @@ public class PlayerHPBar : MonoBehaviour
         if (Input.GetKey("joystick button 4") && z != 0 || Input.GetKey("joystick button 4") && x != 0)
         {
             //ダメージは1～100の中でランダムに決める。
-            int damage = Random.Range(1,1);
-            //Debug.Log("damage : " + damage);
+            int damage = 1;
 
             //現在のHPからダメージを引く
-            currentHp = currentHp - damage;
+            if (currentHp > 0)
+            {
+                currentHp = currentHp - damage;
+            }
+            else
+            {
+                currentHp = 0;
+                //FirstPersonController.m_IsWalking = false;
+            }
+
             //Debug.Log("After currentHp : " + currentHp);
 
             //最大HPにおける現在のHPをSliderに反映。
