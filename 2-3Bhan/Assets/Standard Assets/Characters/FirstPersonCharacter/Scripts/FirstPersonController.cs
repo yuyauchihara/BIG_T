@@ -60,6 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
             Application.targetFrameRate = 60;
+            Cursor.visible = false;
         }
 
 
