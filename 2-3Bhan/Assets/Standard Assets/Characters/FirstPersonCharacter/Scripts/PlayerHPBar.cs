@@ -37,7 +37,7 @@ public class PlayerHPBar : MonoBehaviour
         if (Input.GetKey("joystick button 4") && z != 0 || Input.GetKey("joystick button 4") && x != 0)
         {
             //ダメージは1～100の中でランダムに決める。
-            int damage = 1;
+            int damage = 4;
 
             //現在のHPからダメージを引く
             if (currentHp > 0)
