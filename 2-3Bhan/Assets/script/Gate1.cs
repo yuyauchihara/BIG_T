@@ -6,17 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class Gate1 : MonoBehaviour
 {
+
     int score = 0;
 
-    private void Update()
+
+    private void Start()
     {
 
-        if (getPoint.cPoint >= 1000)
+    }
+
+    public void Update()
+    {
+        if (getPoint.cPoint == 1000)
         {
             Destroy(gameObject);
-
         }
-
-
     }
 }
