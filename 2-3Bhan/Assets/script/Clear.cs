@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Clear : MonoBehaviour
 {
@@ -39,8 +40,8 @@ public class Clear : MonoBehaviour
         _Cleartext.text = "GameClear";
         yield return new WaitForSeconds(5.0f);
         _Cleartext.text = "";
-        _imageMask.gameObject.SetActive(false);
-        _Cleartext.gameObject.SetActive(false);
+        SceneManager.LoadScene("Retry");
+        //_imageMask.gameObject.SetActive(false);
+        //_Cleartext.gameObject.SetActive(false);
     }
-
 }

@@ -101,7 +101,7 @@ public class getPoint : MonoBehaviour
                     //持てるポイントの数がMAXを超えたら強制的にMAXにする
                 }
 
-                Debug.Log("プラス" + tmp);
+                //Debug.Log("プラス" + tmp);
 
                 SetScore();
                //Debug.Log(cPoint+"/最大1000");

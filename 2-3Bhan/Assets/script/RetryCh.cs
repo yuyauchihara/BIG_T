@@ -10,15 +10,15 @@ public class RetryCh : MonoBehaviour
     //メインゲームシーンへ切り替え
     public void MainScene()
     {
-        //SceneManager.LoadScene("シーン名");
-        Debug.Log("Main");
+        SceneManager.LoadScene("SampleScene");
+        //Debug.Log("Main");
     }
 
     //タイトルシーンへ切り替え
     public void TitleScene()
     {
-        //SceneManager.LoadScene("シーン名");
-        Debug.Log("title");
+        SceneManager.LoadScene("Title Scene");
+        //Debug.Log("title");
     }
 
     //ゲーム終了

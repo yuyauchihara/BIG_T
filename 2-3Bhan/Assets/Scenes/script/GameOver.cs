@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("触れた");
+            //Debug.Log("触れた");
             SceneManager.LoadScene("GameOverScene");
         }
     }
