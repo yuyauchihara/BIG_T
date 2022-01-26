@@ -4,17 +4,14 @@ using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.UI;
 
-
 public class GameOver : MonoBehaviour
 {
     public Canvas GameOverText;
-    GameManager gameManager;
     FirstPersonController controller;
-    // Use this for initialization
+    
     void Start()
     {
         GameOverText.enabled = false;
-        controller.enabled = true;
     }
 
     // Update is called once per frame
@@ -23,12 +20,13 @@ public class GameOver : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("触れた");
             GameOverText.enabled = true;
+            Time.timeScale = 0;
             controller.enabled = false;
         }
     }
