@@ -65,7 +65,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if(Input.GetKeyDown("joystick button 7") && backP == 0)
+            if (Input.GetKeyDown("joystick button 7") && backP == 0)
             {
                 Pause = 1;
                 backP = 1;
@@ -230,8 +230,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // keep track of whether or not the character is walking or running
 
             //m_IsWalking = !Input.GetKeyDown("joystick button 0");
-
-            m_IsWalking = !Input.GetButton("Sprint");
+            if (PlayerHPBar.currentHp > 0)
+            {
+                m_IsWalking = !Input.GetButton("Sprint");
+            }
+            else
+            {
+                m_IsWalking = true;
+            }
 
 #endif
             // set the desired speed to be walking or running
