@@ -25,9 +25,9 @@ public class Menu: MonoBehaviour
     //OperationPanelをアクティブにする
     public void SelectXrHubDescription()
     {
+        TitlePanel.SetActive(false);
 
-        StartCoroutine(TilteDelay1());
- 
+        OperationPanel.SetActive(true);
     }
 
 
@@ -35,9 +35,8 @@ public class Menu: MonoBehaviour
     //RulePanelをアクティブにする
     public void SelectUnityDescription()
     {
-        StartCoroutine(TilteDelay2());
-
-        
+        TitlePanel.SetActive(false);
+        RulePanel.SetActive(true);
     }
 
 
@@ -45,49 +44,16 @@ public class Menu: MonoBehaviour
     //TitlePanelをアクティブにする
     public void BackToMenu()
     {
-        StartCoroutine(TilteDelay3());
-
-        
+        TitlePanel.SetActive(true);
+        OperationPanel.SetActive(false);
+        RulePanel.SetActive(false);
     }
 
 
     //メインシーンへ切り替え
     public void Scene()
     {
-        StartCoroutine(TilteDelay4());
         //SceneManager.LoadScene("シーン名");
     }
 
-
-    IEnumerator TilteDelay1()
-    {
-        yield return new WaitForSeconds(0.8f);
-
-        TitlePanel.SetActive(false);
-        OperationPanel.SetActive(true);
-    }
-
-    IEnumerator TilteDelay2()
-    {
-        yield return new WaitForSeconds(0.8f);
-
-        TitlePanel.SetActive(false);
-        RulePanel.SetActive(true);
-    }
-
-    IEnumerator TilteDelay3()
-    {
-        yield return new WaitForSeconds(0.8f);
-
-        TitlePanel.SetActive(true);
-        OperationPanel.SetActive(false);
-        RulePanel.SetActive(false);
-    }
-
-    IEnumerator TilteDelay4()
-    {
-        yield return new WaitForSeconds(0.8f);
-
-
-    }
 }

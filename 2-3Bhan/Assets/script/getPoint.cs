@@ -15,10 +15,10 @@ public class getPoint : MonoBehaviour
     public static int tmp;//前の値
     public static bool clear;
 
-    private int point1 = 10;
-    private int point2 = 100;
-    private int point3 = 300;
-    private int point4 = 500;
+    private int point1 = 20;
+    private int point2 = 20;
+    private int point3 = 20;
+    private int point4 = 20;
 
     private float cTime = 0f;
 
