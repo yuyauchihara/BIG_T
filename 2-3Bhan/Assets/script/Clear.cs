@@ -10,8 +10,13 @@ public class Clear : MonoBehaviour
     [SerializeField]
     private Image _imageMask;
 
+    public AudioClip sound1;
+    AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         _Cleartext.text = "";
         _imageMask.gameObject.SetActive(false);
         _Cleartext.gameObject.SetActive(false);
@@ -22,6 +27,9 @@ public class Clear : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player")){
             StartCoroutine(ClearCoroutine());
+
+            //音(sound1)を鳴らす
+            audioSource.PlayOneShot(sound1);
         }
     }
     IEnumerator ClearCoroutine()
