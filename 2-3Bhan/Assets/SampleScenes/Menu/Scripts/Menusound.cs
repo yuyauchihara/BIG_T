@@ -9,7 +9,7 @@ public class Menusound : MonoBehaviour
     public int It = 0;
     public int i = 0;
 
-    private AudioSource audio;
+    private new AudioSource audio;
     private AudioSource audio2;
 
     [SerializeField]

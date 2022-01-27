@@ -17,8 +17,9 @@ public class RetryCh : MonoBehaviour
     //タイトルシーンへ切り替え
     public void TitleScene()
     {
-        SceneManager.LoadScene("Title Scene");
-        //Debug.Log("title");
+        StartCoroutine(TitleC());
+
+       
     }
 
     //ゲーム終了
@@ -27,9 +28,16 @@ public class RetryCh : MonoBehaviour
         StartCoroutine(GameEndScene());
     }
 
+    IEnumerator TitleC()
+    {
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene("Title Scene");
+        //Debug.Log("title");
+    }
+
     IEnumerator GameEndScene()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(0.8f);
         //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }

@@ -11,6 +11,12 @@ public class Clear : MonoBehaviour
     [SerializeField]
     private Image _imageMask;
 
+    [SerializeField]
+    private Text _HPtext;
+
+    [SerializeField]
+    private Slider _HPBar;
+
     public AudioClip sound1;
     AudioSource audioSource;
 
@@ -29,12 +35,17 @@ public class Clear : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             StartCoroutine(ClearCoroutine());
 
+            GameObject.Find("yuka").GetComponent<PouseMenu>().enabled = false;
+
             //音(sound1)を鳴らす
             audioSource.PlayOneShot(sound1);
         }
     }
     IEnumerator ClearCoroutine()
     {
+        _HPBar.gameObject.SetActive(false);
+        _HPtext.gameObject.SetActive(false);
+
         _imageMask.gameObject.SetActive(true);
         _Cleartext.gameObject.SetActive(true);
         _Cleartext.text = "GameClear";

@@ -26,7 +26,6 @@ public class Menu: MonoBehaviour
     public void SelectXrHubDescription()
     {
         TitlePanel.SetActive(false);
-
         OperationPanel.SetActive(true);
     }
 

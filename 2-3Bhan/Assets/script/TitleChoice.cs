@@ -16,7 +16,7 @@ public class TitleChoice : MonoBehaviour
 
     void OnEnable()
     {
-        button2.GetComponent<Button>().Select();
+        //button2.GetComponent<Button>().Select();
 
         //ボタンが選択された状態になる
         button.GetComponent<Button>().Select();
