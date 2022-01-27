@@ -14,6 +14,8 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] int destPoint = 0;
     private NavMeshAgent agent;
 
+    int SEflag = 0;
+
     Vector3 playerPos;
     GameObject player;
     float distance;
@@ -65,6 +67,7 @@ public class EnemyMove : MonoBehaviour
         playerPos = player.transform.position;
         distance = Vector3.Distance(this.transform.position, playerPos);
 
+        
 
         if (tracking)
         {
@@ -91,11 +94,26 @@ public class EnemyMove : MonoBehaviour
                 StartCoroutine("VolumeUp");
             }
 
+            
+
 
             // エージェントが現目標地点に近づいてきたら、
             // 次の目標地点を選択します
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
                 GotoNextPoint();
+        }
+
+        if (Input.GetKeyDown("joystick button 7"))
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+            else if (distance < trackingRange)
+            {
+                //音(sound1)を鳴らす
+                audioSource.PlayOneShot(sound1);
+            }
         }
     }
 
