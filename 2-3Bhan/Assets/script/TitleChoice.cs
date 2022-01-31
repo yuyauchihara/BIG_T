@@ -8,20 +8,23 @@ public class TitleChoice : MonoBehaviour
     public Button button;
     public Button button2;
     public Button button3;
+    //public Button FirstSelectButton;
+    void Start()
+    {
+        //button2.GetComponent<Button>().Select();
 
+        ////ボタンが選択された状態になる
+        //button.GetComponent<Button>().Select();
+        //FirstSelectButton.Select();
+    }
     void OnEnable()
     {
+        button3.GetComponent<Button>().Select();
+
         button2.GetComponent<Button>().Select();
 
-        //ボタンが選択された状態になる
+        ////ボタンが選択された状態になる
         button.GetComponent<Button>().Select();
-    }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown("joystick button 10"))
-    //    {
-    //        a.position += new Vector3(1f + 1, 0, 0);
-    //    }
-    //}
+    }
 }
